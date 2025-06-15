@@ -154,71 +154,44 @@ body {
 
 /* Base styling already suits larger screens */
 
-@media (max-width: 1024px) {
-    .calc {
-        width: 80%;
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
     }
 
-    #display {
+    .weatherContainer {
+        padding: 20px 15px;
+    }
+
+    .weatherContainer .main {
         font-size: 1.8rem;
     }
 
-    .key button {
-        padding: 18px;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
+    #cityInput {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
     }
 
-    .calc {
-        width: 90%;
+    #btn-js {
+        width: 100%;
+        font-size: 0.9rem;
     }
 
-    #display {
+    #card {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    #card h1 {
         font-size: 1.6rem;
     }
 
-    .key button {
-        padding: 16px;
+    #card p {
         font-size: 1rem;
     }
 
-    #Darkmode {
-        top: 15px;
-        right: 15px;
-        font-size: 1rem;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .calc {
-        width: 95%;
-        padding: 15px;
-    }
-
-    #display {
-        height: 50px;
-        font-size: 1.4rem;
-        padding: 8px;
-    }
-
-    .key {
-        gap: 8px;
-    }
-
-    .key button {
-        padding: 14px;
-        font-size: 0.95rem;
-        border-radius: 8px;
-    }
-
-    #Darkmode {
-        font-size: 1rem;
-        padding: 7px 10px;
+    #card p:last-child {
+        font-size: 2.2rem;
     }
 }

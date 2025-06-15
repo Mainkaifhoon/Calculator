@@ -1,0 +1,224 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calc {
+    background: #c5c3c398;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    margin-bottom: 20px;
+}
+
+.key {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.key button:hover {
+    background-color: #d1d1d1;
+}
+
+.key button:active {
+    transform: scale(0.97);
+    background-color: #c0c0c0;
+}
+
+.key button:nth-child(1),  /* + */
+.key button:nth-child(5),  /* - */
+.key button:nth-child(9),  /* * */
+.key button:nth-child(13)  /* / */ {
+    background-color: #ffd966;
+}
+
+.key button:nth-child(16) { /* C */
+    background-color: #ff6f61;
+    color: white;
+}
+
+.key button:nth-child(15) { /* = */
+    background-color: #4caf50;
+    color: white;
+}
+
+.calc.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.calc.dark-mode #display {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.calc.dark-mode .key button {
+    background-color: #333;
+    color: #fff;
+}
+
+.calc.dark-mode .key button:hover {
+    background-color: #444;
+}
+
+.calc.dark-mode .key button:active {
+    background-color: #555;
+    transform: scale(0.97);
+}
+
+/* Operator Buttons */
+.calc.dark-mode .key button:nth-child(1),   /* + */
+.calc.dark-mode .key button:nth-child(5),   /* - */
+.calc.dark-mode .key button:nth-child(9),   /* * */
+.calc.dark-mode .key button:nth-child(13) { /* / */
+    background-color: #ff9800;
+    color: #000;
+}
+
+/* Equals Button */
+.calc.dark-mode .key button:nth-child(15) {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* Clear Button */
+.calc.dark-mode .key button:nth-child(16) {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.dark {
+    margin: 0;
+    padding: 0;
+    background: #3937375b;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#Darkmode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+
+    border-radius: 10%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#Darkmode:hover {
+    background-color: #666;
+}
+.calc, .key button, #display {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base styling already suits larger screens */
+
+@media (max-width: 1024px) {
+    .calc {
+        width: 80%;
+    }
+
+    #display {
+        font-size: 1.8rem;
+    }
+
+    .key button {
+        padding: 18px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .calc {
+        width: 90%;
+    }
+
+    #display {
+        font-size: 1.6rem;
+    }
+
+    .key button {
+        padding: 16px;
+        font-size: 1rem;
+    }
+
+    #Darkmode {
+        top: 15px;
+        right: 15px;
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calc {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #display {
+        height: 50px;
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+
+    .key {
+        gap: 8px;
+    }
+
+    .key button {
+        padding: 14px;
+        font-size: 0.95rem;
+        border-radius: 8px;
+    }
+
+    #Darkmode {
+        font-size: 1rem;
+        padding: 7px 10px;
+    }
+}
